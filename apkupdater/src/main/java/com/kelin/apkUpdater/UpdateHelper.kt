@@ -142,7 +142,7 @@ object UpdateHelper {
 
     private fun getIntentType(file: File): String? {
         return file.name.let { fileName ->
-            fileName.substring(fileName.lastIndexOf(".") + 1, fileName.length).toLowerCase(Locale.getDefault()).let {
+            fileName.substring(fileName.lastIndexOf(".") + 1, fileName.length).lowercase(Locale.getDefault()).let {
                 MimeTypeMap.getSingleton().getMimeTypeFromExtension(it)
             }
         }
